@@ -1,5 +1,8 @@
 class Plant:
-	def __init__(self, name, height, old):
+	name: str
+	height: int
+	old: int
+	def __init__(self, name: str, height: int, old: int) -> None:
 		self.name = name
 		self.height = height
 		self.old = old
@@ -13,7 +16,7 @@ class Plant:
 	def get_info(self):
 		return f"{self.name}: {self.height}cm, {self.old} days old"
 
-def ft_data():
+def ft_data() -> None:
 	rose = Plant("Rose", 25, 30)
 	print("=== Day 1 ===")
 	print(rose.get_info())

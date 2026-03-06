@@ -1,19 +1,23 @@
 class Plant:
-	def __init__(self, name, height):
+	name: str
+	height: int
+	def __init__(self, name: str, height: int):
 		self.name = name
 		self.height = height
-	def get_info():
+	def get_info() -> str:
 		return (f"- {self.name.capitalize()} Tree: {self.height}cm")
 
 class FloweringPlant(Plant):
-	def __init__(self, name, height, color):
+	color: str
+	def __init__(self, name: str, height: int, color: str):
 		super().__init__(name, height)
 		self.color = color
-	def get_info(self):
+	def get_info(self) -> str:
 		return (f"- {self.name.capitalize()}: {self.height}cm, {self.color} flowers (blooming)")
 
 class PrizeFlower(FloweringPlant):
-	def __init__(self, name, height, color, prize):
+	prize: int
+	def __init__(self, name: str, height: int, color: str, prize: int):
 		super().__init__(name, height, color)
 		self.prize = prize
 	def get_info(self):
